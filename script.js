@@ -79,14 +79,14 @@ let getTime = (receivedSecond) => {
     let hours = Math.floor(receivedSecond / secondsInHours);
     let minutes = Math.floor( (receivedSecond - hours * secondsInHours) / secondsInMinutes );
     let seconds = receivedSecond - hours * secondsInHours - minutes * secondsInMinutes;
-    if(hours > 24) {
+    if(hours >= 24) {
         alert(`Більше одного дня`)
     } else {
         return `${hours}:${minutes}:${seconds}`
     }
 }
 
-let time = getTime(45630);
+let time = getTime(86399);
 console.log(time);
 
 // 7. 4 відмінності ерров фанкшина від звичайної функції.
